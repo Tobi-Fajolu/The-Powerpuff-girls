@@ -98,17 +98,25 @@ button.cta{
 	background: lime;
 	display: inline-block;
 	border: 5px solid rgba(0,0,0,.15);
-	box-shadow: 0 0 0 10px rgba(0,127,255,.15)
-	padding: 30px 30px;
+	box-shadow: 0 0 0 10px rgba(0,127,255,.15);
+	padding: 10px 10px;
 	border-radius: 10px;
 	text-decoration: none;
+	outline: none;
+	box-shadow: none;
+	cursor: pointer;
+	
+}
+
+a.cta:active,
+button.cta:active{
+	opacity: .7;
 }
 
 a.cta.alt,
 button.cta.alt{
 	background-color: maroon;
-
-
+	box-shadow: 0 0 0 0;
 }
 
 nav{
@@ -117,6 +125,7 @@ nav{
 	box-shadow: 0 5px 8px rgba(0,0,0,.2);
 	position: sticky;
 	top: 0%;
+	z-index: 1;
 }
 nav .logo{
 	display: block;
@@ -180,16 +189,119 @@ nav ul li a{
 	font-weight: 800;
 }
 
+.sep{
+	height:10px;
+	width: 470px;
+	background-color: #111111;
+	margin: 70px auto;
+}
+
+.story h3{
+	font-size: 40px;
+	font-weight: 800;
+}
+
+.nb-list{
+	width: 470px;
+	padding: 20px 20px 0 20px;
+	box-sizing: border-box;
+	background-color: #EDEDED;
+	float: left;
+	margin: 0px 20px 20px 0px;
+	position: relative;
+
+}
+
+.nb-list li{
+	height: 70px;
+	border-radius: 10px;
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 20px;
+	padding: 6px 20px;
+	box-sizing: border-box;
+
+}
+.nb-list li.salmon{background-color: salmon;}
+.nb-list li.grey{background-color: rgba(0,0,0,.1);}
+.nb-list li.pink{
+	background-color: pink;
+	color: #111111;
+}
+.nb-list li.green{background-color: green;}
+.nb-list li.lightblue{background-color: lightblue;}
+.nb-list li.red{background-color: red;}
+.nb-list li.yellow{background-color: yellow;}
+.nb-list li.blue{background-color: blue;}
+
+.nb-list li.dragging{
+	position: absolute;
+	top: 90px;
+	left:70px;
+	right:-10px;
+	transform: rotate(6deg);
+	box-shadow: 0 2px 14px rgba(0,0,0,.3)
+}
+
+.nb-list li.dragging:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 54px;
+	height: 60px;
+	background: url(img/hand.png) no-repeat 0 0;
+	background-size:100%;
+	bottom: -30px;
+	left: 70%;
+}
+
+.powerpuffgirls-img{
+	display: block;
+	margin: 0px auto;
+}
+
+footer{
+	text-align: center;
+	color: rgba(0,0,0,.4);
+	font-size: 20px;
+	margin: 85px 0 45px;
+	font-weight: bold;
+}
+
+footer a{
+	color: rgba(0,0,0,.4);
+}
+
+.popup{
+	display: none;
+}
 
 
 /*
 
-<div class="more-info" id="more-info">
-		<h2>Join Our Fan Club</h2>
-		<p>Every week, we have <span class="highlight">a party!</span> To join us, then join our fan club. Members will get pictures of us preparing how to fight crime and save the world! Amazing yeah?!</p>
-		<button class="cta">Sign Me Up!</button>
-
+<div class="sep"></div>
+	<div class="story" id="story">
+		<ul class="nb-list">
+			<li class="salmon">Music</li>
+			<li class="grey">&nbsp;</li>
+			<li class="pink dragging">The Professor</li>
+			<li class="green">Mr Mayor</li>
+			<li class="lightblue">Candy</li>
+			<li class="red">Ms Keane</li>
+			<li class="yellow">Play time</li> 
+			<li class="blue">Fighting Crime</li>
+		</ul>
+		<h3>Left: Things We Find Important</br>
+		Below: Our Story</h3>
+		<p>Once upon a time, in a little town called Townsville, Professor Utonium was trying to create the "perfect little girl" using a mixture of "sugar, spice, and everything nice". However, he accidentally spilled a mysterious substance called "Chemical X" into the mixture.</p>
+		<p>Thus, The Powerpuff Girls were born, starring Blossom, Bubbles, and Buttercup.</p>
+		<p>All three girls have superpowers including wingless flight, super strength, superhuman speed, near invulnerability, x-ray vision, superhuman senses, red heat vision, pink-green-and-blue energy projection, invisibility, and control over lightning and fire.</p>
+		<p>Blossom is the commander and leader. Bubbles, she is the joy and the laughter. Buttercup, she is the toughest fighter.</p>
+		
 	</div>
+	<div class="sep"></div>
 
 */
 
